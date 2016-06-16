@@ -35,7 +35,7 @@ export default function attachBucketToTemplate (template, bucket, callback) {
         Tracker.autorun(() => {
             Tracker.nonreactive(() => {
                 const oldBucket = reactiveHandler.get();
-                if (oldBucket && oldBucket.stop()) {
+                if (oldBucket && oldBucket.stop) {
                     oldBucket.stop();
                 }
             });

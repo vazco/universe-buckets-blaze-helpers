@@ -1,6 +1,6 @@
 Package.describe({
     name: 'universe:buckets-blaze-helpers',
-    version: '1.0.0',
+    version: '1.0.1',
     // Brief, one-line summary of the package.
     summary: 'Sets of helpers that improves work with buckets in blaze templates',
     // URL to the Git repository containing the source code for this package.
