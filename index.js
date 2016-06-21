@@ -32,27 +32,27 @@ export default function attachBucketToTemplate (template, bucket, callback) {
 
         });
 
-        Tracker.autorun(() => {
+        this.autorun(() => {
+            const data = Template.currentData();
             Tracker.nonreactive(() => {
                 const oldBucket = reactiveHandler.get();
                 if (oldBucket && oldBucket.stop) {
                     oldBucket.stop();
                 }
-            });
-
-            if (typeof callback === 'function') {
-                const resHandl = callback.call(this, Template.currentData(), bucket);
-                if (!resHandl.getDocs || !resHandl.stop) {
-                    throw new Error('Bucket handler was expected...');
+                if (typeof callback === 'function') {
+                    const resHandl = callback.call(this, data, bucket);
+                    if (!resHandl.getDocs || !resHandl.stop) {
+                        throw new Error('Bucket handler was expected...');
+                    }
+                    reactiveHandler.set(resHandl);
+                    return;
                 }
-                reactiveHandler.set(resHandl);
-                return;
-            }
-            if (callback === true) {
-                reactiveHandler.set(bucket.subscribe(Template.currentData()));
-                return;
-            }
-            reactiveHandler.set(bucket.load(Template.currentData()));
+                if (callback === true) {
+                    reactiveHandler.set(bucket.subscribe(data));
+                    return;
+                }
+                reactiveHandler.set(bucket.load(data));
+            });
         });
     });
 
