@@ -1,4 +1,5 @@
-<a href="http://unicms.io"><img src="http://unicms.io/banners/standalone.png" /></a>
+## Abandonware
+
 # Universe Buckets Blaze Helpers
 Sets of helpers that improves work with buckets in blaze templates
 
