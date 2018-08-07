@@ -1,6 +1,15 @@
-## Abandonware
+<h1 align="center">
+    <a href="https://github.com/vazco">vazco</a>/Universe Buckets Blaze Helpers
+</h1>
 
-# Universe Buckets Blaze Helpers
+&nbsp;
+
+<h3 align="center">
+  -- Abandonware. This package is deprecated! --
+</h3>
+
+&nbsp;
+
 Sets of helpers that improves work with buckets in blaze templates
 
 ## Installation
@@ -30,4 +39,8 @@ example:
 </template>
 ```
 
-##  License MIT
+## License
+
+<img src="https://vazco.eu/banner.png" align="right">
+
+**Like every package maintained by [Vazco](https://vazco.eu/), Universe Buckets Blaze Helpers is [MIT licensed](https://github.com/vazco/uniforms/blob/master/LICENSE).**
